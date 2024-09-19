@@ -1357,7 +1357,7 @@ p.center {
 }
 .nav-section .nav-logo img {
   max-height: 100%;
-  width: auto;
+  width: 100%;
   object-fit: contain;
 }
 .nav-section.light {
