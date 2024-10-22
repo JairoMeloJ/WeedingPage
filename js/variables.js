@@ -16,9 +16,7 @@ var hero_full_screen = true;                    //If true, the hero section will
 
 //HERO BACKGROUND SLIDESHOW IMAGES
 var slidehow_images = [
-    "https://via.placeholder.com/1920x1080.png",
-    "https://via.placeholder.com/1920x1080.png",
-    "https://via.placeholder.com/1920x1080.png"
+    "/images/hero/slider1.jpg",
 ];
 
 //TIMELINE PARALLAX
@@ -43,52 +41,17 @@ var countdown_end_msg = "Event Started!";       //Message to display when the co
 var map_canvas_id = "map_canvas";               //The HTML "id" of the map canvas
 var map_color = "#8eaeba";                      //Google map color
 var map_initial_zoom = 15;                      //The initial zoom when Google map loads
-var map_initial_latitude = 33.779613;           //Google map initial Latitude. If "null", the latitude of the first marked will be used
-var map_initial_longitude = -118.066904;        //Google map initial Longitude. If "null", the longitude of the first marked will be used
+var map_initial_latitude = 18.467252731323242;           //Google map initial Latitude. If "null", the latitude of the first marked will be used
+var map_initial_longitude = -69.88040161132812;        //Google map initial Longitude. If "null", the longitude of the first marked will be used
 var use_default_map_style = false;              //If true, default map style will be used
 
 //List of map markers
 var map_markers = [
     {
-        "title": "Reception",
-        "latitude": 33.775664,
-        "longitude": -118.065090,
-        "icon": "fas fa-glass-cheers", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Old Ranch Country Club <br> 29033 West Lake Drive, Agoura Hills, CA"
-    },
-    {
-        "title": "Accommodation 1",
-        "latitude": 33.777929,
-        "longitude": -118.076891,
-        "icon": "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Accommodation 1 <br> Rossmoor, CA 90720"
-    },
-    {
-        "title": "Accommodation 2",
-        "latitude": 33.780428,
-        "longitude": -118.084075,
-        "icon": "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Accommodation 2 <br> Los Alamitos, CA 90720"
-    },
-    {
-        "title": "Accommodation 3",
-        "latitude": 33.777551,
-        "longitude": -118.050468,
-        "icon": "fas fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Accommodation 3 <br> Seal Beach, CA 90740"
-    },
-    {
-        "title": "Transportation",
-        "latitude": 33.782930,
-        "longitude": -118.060552,
-        "icon": "fas fa-plane", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Seal Beach VORTAC SLI <br> Los Alamitos, CA 90720"
-    },
-    {
-        "title": "Ceremony",
-        "latitude": 33.776384,
-        "longitude": -118.058149,
-        "icon": "fas fa-bell", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-        "infoWindow": "Birchwood Church <br> Seal Beach, CA 90740"
+        "title": "Recepción",
+        "latitude": 18.467252731323242,
+        "longitude": -69.88040161132812,
+        "icon": "fas fa-glass-cheers", 
+        "infoWindow": "Restaurante la Claraboya <br> Club naval para oficiales"
     }
 ];
