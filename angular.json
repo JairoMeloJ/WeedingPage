@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WeedingAngular": {
+    "weedingpage-angelajairo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -21,15 +21,33 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/bootstrap.bundle.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/ismobile.js",
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/jquery-migrate-3.3.2.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/jquery.nicescroll.js",
+              "src/assets/js/jquery.placeholder.min.js",
+              "src/assets/js/jquery.zoomslider.js",
+              "src/assets/js/lightbox.min.js",
+              "src/assets/js/modernizr-3.6.0.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/retina.js",
+              "src/assets/js/retina.min.js",
+              "src/assets/js/richmarker.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/testBlog.js",
+              "src/assets/js/waypoints-sticky.min.js",
+              "src/assets/js/waypoints.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -64,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "WeedingAngular:build:production"
+              "buildTarget": "weedingpage-angelajairo:build:production"
             },
             "development": {
-              "buildTarget": "WeedingAngular:build:development"
+              "buildTarget": "weedingpage-angelajairo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,18 +102,39 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.bundle.js",
+              "src/assets/js/bootstrap.bundle.min.js",
+              "src/assets/js/ismobile.js",
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/jquery-migrate-3.3.2.min.js",
+              "src/assets/js/jquery-ui.min.js",
+              "src/assets/js/jquery.nicescroll.js",
+              "src/assets/js/jquery.placeholder.min.js",
+              "src/assets/js/jquery.zoomslider.js",
+              "src/assets/js/lightbox.min.js",
+              "src/assets/js/modernizr-3.6.0.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/retina.js",
+              "src/assets/js/retina.min.js",
+              "src/assets/js/richmarker.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/testBlog.js",
+              "src/assets/js/waypoints-sticky.min.js",
+              "src/assets/js/waypoints.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4ba3b565-f5b7-4f51-8749-41290d572bc5"
   }
 }

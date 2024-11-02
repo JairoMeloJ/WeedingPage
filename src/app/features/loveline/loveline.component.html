@@ -1,0 +1,170 @@
+<!-- COMIENZO DE LA SECCIÓN LÍNEA DEL AMOR -->
+<section id="loveline">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+                <div class="timeline">
+                    <div class="year" data-animation-direction="from-top" data-animation-delay="250">
+                        <span class="neela-style">2022</span>
+                    </div>
+
+                    <div class="gallery-container">
+                        <div class="timeline-gallery-wrapper" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <div class="timeline-gallery owl-carousel">
+                                <div *ngFor="let image of year2022; let i = index" class="item">
+                                    <a class="hover-img" [href]="'./assets/images/2022/' + image"
+                                        data-lightbox="gallery-timeline"
+                                        [ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }"
+                                        title="Our Vacations">
+                                        <span class="btn btn-light btn-sm">+</span>
+                                    </a>
+                                    <img [src]="'./assets/images/2022/' + image" alt="Foto #{{i}} - {{image}}"
+                                        style="max-height: 430px; max-width: 620px; object-fit: contain;"
+                                        [ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="description-wrapper" data-animation-direction="from-bottom"
+                            data-animation-delay="250">
+                            <div class="description">
+                                <div class="neela-style">
+                                    <h4>Algunos de nuestros momentos más especiales</h4>
+                                    <p>Hemos compartido aventuras y risas, hemos superado desafíos y crecido juntos. 
+                                       Hemos encontrado en el otro nuestro hogar, el compañero de vida y 
+                                       su mayor alegría. Hoy celebramos el inicio de una nueva etapa, llena de amor, 
+                                       esperanza y sueños compartidos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="year" data-animation-direction="from-top" data-animation-delay="250">
+                        <span class="neela-style">2023</span>
+                    </div>
+
+                    <div class="template-2" style="transform: scaleX(-1);">
+                        <div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2023/3.JPG" alt="Tercera">
+                        </div>
+
+                        <div class="image-1" data-parallax="6" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2023/4.JPG" style="max-width: 600px; max-height: 600px;" alt="Cuarta">
+                        </div>
+
+                        <div class="image-2" data-parallax="-4" data-animation-direction="from-right"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2023/5.JPG" style="max-width: 600px; max-height: 650px;" alt="Quinta">
+                        </div>
+                    </div>
+
+                    <div class="template-1">
+                        <div class="image-1" data-parallax="-4" data-animation-direction="from-right"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2023/2.JPG" style="max-width: 600px; max-height: 600px;" alt="Segunda">
+                        </div>
+
+                        <div class="image-2" data-parallax="6" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2023/1.JPG" style="max-width: 600px; max-height: 650px;" alt="Primera">
+                        </div>
+
+                        <div class="description-wrapper" data-parallax="-6" data-animation-direction="from-bottom"
+                            data-animation-delay="250">
+                            <div class="description" data-parallax="-6" data-animation-direction="from-bottom"
+                                data-animation-delay="250">
+                                <div class="neela-style">
+                                    <h4>Nuestras primeras citas</h4>
+                                    <p>Desde las primeras salidas juntos, cada momento 
+                                        con Angela se sentía especial. Desde celebrar una 
+                                        graduación, el primer Año Nuevo juntos, hasta esa 
+                                        primera cena compartida, cada experiencia reforzaba 
+                                        lo que ya sabíamos...<br> 
+                                        ¡Eran los inicios de una historia que apenas comenzaba!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="year" data-animation-direction="from-top" data-animation-delay="250">
+                        <span class="neela-style">2024</span>
+                    </div>
+
+                    <div class="template-2">
+                        <div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/1.jpg" style="transform: scaleX(-1); max-width: 600px; max-height: 420px; " alt="">
+                        </div>
+
+                        <div class="image-1" data-parallax="-2" data-animation-direction="from-right"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/2.jpg" style="transform: scaleX(-1);" alt="">
+                        </div>
+
+                        <div class="image-2" data-parallax="4" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/3.jpg" style="transform: scaleX(-1);" alt="">
+                        </div>
+                    </div>
+
+                    <div class="template-2" style="transform: scaleX(-1);">
+                        <div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/4.JPG" alt="">
+                        </div>
+
+                        <div class="image-1" data-parallax="-2" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/5.JPG" alt="">
+                        </div>
+
+                        <div class="image-2" data-parallax="4" data-animation-direction="from-right"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/6.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="template-1" style="transform: scaleX(-1);">
+                        <div class="image-1" data-parallax="-4" data-animation-direction="from-right"
+                            data-animation-delay="250">
+                            <img src="./assets/images/hero/presentation.jpg" style="max-width: 600px; max-height: 600px;" alt="Segunda">
+                        </div>
+
+                        <div class="image-2" data-parallax="6" data-animation-direction="from-left"
+                            data-animation-delay="250">
+                            <img src="./assets/images/2024/10.jpg" style="max-width: 600px; max-height: 650px;" alt="Primera">
+                        </div>
+
+                        <div class="description-wrapper" data-animation-direction="from-bottom"
+                            data-animation-delay="250">
+                            <div class="description">
+                                <div class="neela-style" style="transform: scaleX(-1);">
+                                    <h4>¡Ella dijo Sí!</h4>
+                                    <p>En un lugar especial, donde sus corazones latieron 
+                                       al mismo ritmo, reuní el valor y, con una 
+                                       mezcla de emoción y amor, hice la pregunta más importante. 
+                                       En ese instante, el mundo se detuvo, y tu, con una 
+                                       sonrisa y el corazón lleno de alegría, dijiste que sí a una 
+                                       vida juntos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline_footer">
+                    <i class="icon-diamond-ring" data-animation-direction="from-top" data-animation-delay="250"></i>
+                    <div class="punchline" data-animation-direction="from-bottom" data-animation-delay="250">
+                        <small>Aquí es donde comienza nuestro</small>para siempre!
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN DE LA SECCIÓN LÍNEA DEL AMOR -->

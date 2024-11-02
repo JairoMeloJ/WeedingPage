@@ -1,0 +1,45 @@
+<!-- COMIENZO DE LA SECCIÓN BLOG -->
+<section id="blog" class="padding-divider-top divider-bottom-2 divider-pattern">
+    <div class="section-divider-top-1 off-section"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="section-title">Recuerdos de la Boda</h1>
+        </div>
+      </div>
+  
+      <div class="row">
+        <!-- COMIENZO DEL CONTENIDO PRINCIPAL DEL BLOG -->
+        <div class="col-sm-12">
+          <!-- COMIENZO DEL LISTADO DE BLOGS -->
+          <div class="blog-listing clearfix">
+            <div class="row gx-5 blog-container" id="blog-container">
+              <div *ngFor="let blog of blogs" class="item col-md-6">
+                <div class="image">
+                  <a [href]="blog.imageURL" data-lightbox="WeddingPhotos" [title]="blog.title">
+                    <span class="btn btn-light"><i class="fa fa-file-o"></i>Expandir</span>
+                  </a>
+                  <img [src]="blog.imageURL || 'https://via.placeholder.com/800x500'" alt="blog.imageURL" style="max-width: 100%; max-height: 250px; object-fit: cover;" />
+                </div>
+  
+                <div class="date">{{ blog.date.toDate() | date: 'dd/MM/yyyy' }}</div>
+  
+                <div class="info-blog">
+                  <h3 class="post-title"><a href="blog-single-post.html">{{ blog.title }}</a></h3>
+                  <p>{{ blog.content }}</p>
+                  <div class="bottom-info"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN DEL LISTADO DE BLOGS -->
+  
+          <div class="center">
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogModal">+</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN DE LA SECCIÓN BLOG -->
+  
