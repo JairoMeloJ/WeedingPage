@@ -17,10 +17,6 @@ import { LocationComponent } from './location/location.component';
 import { GiftsComponent } from './gifts/gifts.component';
 
 @NgModule({
-    imports: [
-        CommonModule
-
-    ],
     declarations: [
         FeaturesComponent,
         PreloaderComponent,
@@ -37,6 +33,9 @@ import { GiftsComponent } from './gifts/gifts.component';
         BlogComponent,
         ContactComponent,
         FooterComponent
+    ],
+    imports: [
+        CommonModule
     ],
     exports: [
         FeaturesComponent,
