@@ -139,10 +139,10 @@
 							</h1>
 
 							<div class="hero-subtitle light" data-animation-direction="fade"
-								data-animation-delay="1000">DIC <span>21</span> 2024</div>
-
+								data-animation-delay="1000">DIC
+								<span>21</span> 2024
+							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -153,24 +153,6 @@
 		<section id="about-us">
 			<div class="container">
 				<div class="row about-elems-wrapper justify-content-center">
-					<!-- <div class="element col-md-6 col-xl-4 offset-xl-2" data-animation-direction="from-left"
-						data-animation-delay="300">
-						<div class="image">
-							<img src="https://via.placeholder.com/600x600.png" alt="" />
-							<div class="hover-info neela-style">
-								<div class="content">
-									<h3>Jairo Melo<small>El Novio</small></h3>
-									<p>Estoy increíblemente bendecido y emocionado de pasar todos los días del resto
-										de mi vida con mi mejor amiga.</p>
-									<ul class="sn-icons">
-										<li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-										<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-										<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div> -->
 
 					<div class="divider-about-us" data-animation-direction="fade" data-animation-delay="500">
 						<i class="icon-two-hearts"></i>
@@ -179,7 +161,7 @@
 					<div class="element col-md-6 col-xl-4" data-animation-direction="from-right"
 						data-animation-delay="400">
 						<div class="image">
-							<img src="/images/hero/front-bg.jpg" alt="" />
+							<img src="./images/hero/front-bg.jpg" alt="" />
 							<div class="hover-info neela-style">
 								<div class="content">
 									<h3>Angela Tejeda<br> & <br>Jairo Melo<small>Los Novios</small></h3>
@@ -229,20 +211,25 @@
 					<div class="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
 						<div class="timeline">
 							<div class="year" data-animation-direction="from-top" data-animation-delay="250">
-								<span class="neela-style">2020</span>
+								<span class="neela-style">2022</span>
 							</div>
 
 							<div class="gallery-container">
 								<div class="timeline-gallery-wrapper" data-animation-direction="from-left"
 									data-animation-delay="250">
 									<div class="timeline-gallery owl-carousel">
-										<div class="item">
-											<a class="hover-img"
-												href="https://via.placeholder.com/1920x1080.png?text=Imagen+Galería"
-												data-lightbox="gallery-timeline" title="Nuestras Vacaciones"><span
-													class="btn btn-light btn-sm">+</span></a>
-											<img src="https://via.placeholder.com/620x430.png" alt="" />
+										<div *ngFor="let image of year2022; let i = index" class="item">
+											<a class="hover-img" [href]="'./images/2022/' + image"
+												data-lightbox="gallery-timeline"
+												[ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }"
+												title="Our Vacations">
+												<span class="btn btn-light btn-sm">+</span>
+											</a>
+											<img [src]="'./images/2022/' + image" alt="Foto #{{i}} - {{image}}"
+												style="max-height: 430px; max-width: 620px; object-fit: contain;"
+												[ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }" />
 										</div>
+
 									</div>
 								</div>
 
@@ -250,34 +237,52 @@
 									data-animation-delay="250">
 									<div class="description">
 										<div class="neela-style">
-											<h4>Algunos de nuestros momentos más memorables</h4>
-											<p>Habían hecho viajes cortos antes, pero estas fueron sus primeras
-												grandes vacaciones fuera de los EE. UU. Angela y Jairo viajaron a la
-												región del Báltico y visitaron varios países, incluidos Islandia,
-												Finlandia, Dinamarca, Rusia, Polonia y Alemania.</p>
+											<h4>Algunos de nuestros momentos más especiales</h4>
+											<p>Hemos compartido aventuras y risas, hemos superado desafíos y crecido
+												juntos.
+												Hemos encontrado en el otro nuestro hogar, el compañero de vida y
+												su mayor alegría. Hoy celebramos el inicio de una nueva etapa, llena de
+												amor,
+												esperanza y sueños compartidos.</p>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="year" data-animation-direction="from-top" data-animation-delay="250">
-								<span class="neela-style">2021</span>
+								<span class="neela-style">2023</span>
+							</div>
+
+							<div class="template-2" style="transform: scaleX(-1);">
+								<div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+									data-animation-delay="250">
+									<img src="./images/2023/3.JPG" alt="Tercera">
+								</div>
+
+								<div class="image-1" data-parallax="6" data-animation-direction="from-left"
+									data-animation-delay="250">
+									<img src="./images/2023/4.JPG" style="max-width: 600px; max-height: 600px;"
+										alt="Cuarta">
+								</div>
+
+								<div class="image-2" data-parallax="-4" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/2023/5.JPG" style="max-width: 600px; max-height: 650px;"
+										alt="Quinta">
+								</div>
 							</div>
 
 							<div class="template-1">
-								<div class="date" data-parallax="3" data-animation-direction="fade"
-									data-animation-delay="350">
-									<span class="neela-style">22 de septiembre</span>
+								<div class="image-1" data-parallax="-4" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/2023/2.JPG" style="max-width: 600px; max-height: 600px;"
+										alt="Segunda">
 								</div>
 
-								<div class="image-1" data-parallax="-4" data-animation-direction="from-left"
+								<div class="image-2" data-parallax="6" data-animation-direction="from-left"
 									data-animation-delay="250">
-									<img src="https://via.placeholder.com/600x600.png" alt="">
-								</div>
-
-								<div class="image-2" data-parallax="6" data-animation-direction="from-right"
-									data-animation-delay="250">
-									<img src="https://via.placeholder.com/600x820.png" alt="">
+									<img src="./images/2023/1.JPG" style="max-width: 600px; max-height: 650px;"
+										alt="Primera">
 								</div>
 
 								<div class="description-wrapper" data-parallax="-6"
@@ -285,53 +290,81 @@
 									<div class="description" data-parallax="-6" data-animation-direction="from-bottom"
 										data-animation-delay="250">
 										<div class="neela-style">
-											<h4>Nuestra primera cita y beso</h4>
-											<p>Jairo estaba muy nervioso. Tenía miedo de expresar sus sentimientos a
-												Angela, pero no quería correr el riesgo de quedarse en la zona de
-												amigos. ¡Así que era ahora o nunca! Después de todo, Angela era la
-												indicada. "¡Ya era hora!" dijo ella. ¡Fue... PERFECTO!</p>
+											<h4>Nuestras primeras citas</h4>
+											<p>Desde las primeras salidas juntos, cada momento
+												con Angela se sentía especial. Desde celebrar una
+												graduación, el primer Año Nuevo juntos, hasta esa
+												primera cena compartida, cada experiencia reforzaba
+												lo que ya sabíamos...<br>
+												¡Eran los inicios de una historia que apenas comenzaba!</p>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="year" data-animation-direction="from-top" data-animation-delay="250">
-								<span class="neela-style">2022</span>
+								<span class="neela-style">2024</span>
 							</div>
 
 							<div class="template-2">
-								<div class="date" data-parallax="3" data-animation-direction="fade"
-									data-animation-delay="250">
-									<span class="neela-style">15 de julio</span>
-								</div>
-
 								<div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
 									data-animation-delay="250">
-									<iframe src="https://player.vimeo.com/video/136240001" width="590" height="330"
-										allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+									<img src="./images/2024/1.jpg"
+										style="transform: scaleX(-1); max-width: 600px; max-height: 420px; " alt="">
+								</div>
+
+								<div class="image-1" data-parallax="-2" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/2024/2.jpg" style="transform: scaleX(-1);" alt="">
+								</div>
+
+								<div class="image-2" data-parallax="4" data-animation-direction="from-left"
+									data-animation-delay="250">
+									<img src="./images/2024/3.jpg" style="transform: scaleX(-1);" alt="">
+								</div>
+							</div>
+
+							<div class="template-2" style="transform: scaleX(-1);">
+								<div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+									data-animation-delay="250">
+									<img src="./images/2024/4.JPG" alt="">
 								</div>
 
 								<div class="image-1" data-parallax="-2" data-animation-direction="from-left"
 									data-animation-delay="250">
-									<img src="https://via.placeholder.com/600x800.png" alt="">
+									<img src="./images/2024/5.JPG" alt="">
 								</div>
 
 								<div class="image-2" data-parallax="4" data-animation-direction="from-right"
 									data-animation-delay="250">
-									<img src="https://via.placeholder.com/600x800.png" alt="">
+									<img src="./images/2024/6.jpg" alt="">
+								</div>
+							</div>
+
+							<div class="template-1" style="transform: scaleX(-1);">
+								<div class="image-1" data-parallax="-4" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/hero/presentation.jpg"
+										style="max-width: 600px; max-height: 600px;" alt="Segunda">
 								</div>
 
-								<div class="description-wrapper" data-parallax="-5"
-									data-animation-direction="from-bottom" data-animation-delay="250">
-									<div class="description" data-parallax="-6" data-animation-direction="from-bottom"
-										data-animation-delay="250">
-										<div class="neela-style">
+								<div class="image-2" data-parallax="6" data-animation-direction="from-left"
+									data-animation-delay="250">
+									<img src="./images/2024/10.jpg" style="max-width: 600px; max-height: 650px;"
+										alt="Primera">
+								</div>
+
+								<div class="description-wrapper" data-animation-direction="from-bottom"
+									data-animation-delay="250">
+									<div class="description">
+										<div class="neela-style" style="transform: scaleX(-1);">
 											<h4>¡Ella dijo Sí!</h4>
-											<p>Entonces, ¿cómo le propuso matrimonio Mark? ¡En un crucero ... en la
-												orilla ... de las Islas Caimán! (¡SÍ!) De camino a cenar con el
-												Capitán del barco, los nervios de Mark se apoderaron de él y llevó a
-												Sarah de vuelta a la habitación y directamente al balcón para la
-												mejor propuesta que una chica podría pedir.</p>
+											<p>En un lugar especial, donde sus corazones latieron
+												al mismo ritmo, reuní el valor y, con una
+												mezcla de emoción y amor, hice la pregunta más importante.
+												En ese instante, el mundo se detuvo, y tu, con una
+												sonrisa y el corazón lleno de alegría, dijiste que sí a una
+												vida juntos.</p>
 										</div>
 									</div>
 								</div>
@@ -513,8 +546,7 @@
 		<!-- FIN DE LA SECCIÓN GALERÍA -->
 
 		<!-- COMIENZO DE LA SECCIÓN REGALOS DE BODA -->
-		<section id="giftregistry"
-			class="section-bg-color parallax-background padding-divider-top section-divider-bottom-1">
+		<section id="giftregistry" class="section-bg-color parallax-background padding-divider-top section-divider-bottom-1">
 			<div class="section-divider-top-1 off-section"></div>
 			<div class="container">
 				<div class="row">
@@ -527,43 +559,35 @@
 						</div>
 					</div>
 				</div>
-
+		
 				<div class="row">
 					<div class="col-md-8 col-xl-6">
 						<ul class="wedding-gifts">
-
+		
 							<li id="gift-list" data-animation-direction="from-bottom" data-animation-delay="300">
 								<div class="neela-style">
 									<i class="icon-wedding"></i>
 									<h3>Consulta nuestra<br>lista de regalos</h3>
-
+		
 									<div class="info">
-										<a href="#" class="img"><img
-												src="https://via.placeholder.com/215x75.png?text=Logo+Tienda"
-												alt="Macy's" /></a>
-										<a href="#" class="img"><img
-												src="https://via.placeholder.com/215x75.png?text=Logo+Tienda"
-												alt="Target" /></a>
+										<a href="https://listadeboda.plazalama.com/lbd/lista/ver/506" class="img"><img
+												src="./images/PlazaLama.png" alt="Plaza Lama" /></a>
+										<a href="https://www.amazon.com/hz/wishlist/ls/DTC415FO0ARW?ref_=wl_share"
+											class="img"><img src="./images/Amazon.png" alt="Amazon" /></a>
 									</div>
 								</div>
 							</li>
-
+		
 							<li id="help-honeymoon" data-animation-direction="from-bottom" data-animation-delay="300">
 								<div class="neela-style">
 									<i class="icon-honeymoon"></i>
-									<h3>Contribuye a nuestra<br>luna de miel soñada</h3>
-
+									<h3>Tambien puedes contribuir a nuestra<br>luna de miel soñada</h3>
+		
 									<div class="info">
-										<button id="other-amount-btn" class="btn btn-primary reverse">Otro
-											Monto</button>
-										<input type="number" id="other-amount-input" placeholder="Ingresa tu monto"
-											class="form-control mt-2" style="display: none;">
-										<div id="paypal-button-other" style="display: none;"></div>
-										<!-- Botón de monto personalizado -->
+										¡Puedes llamarnos personalmente y socilitar información sobre como podría ser posible!
 									</div>
 								</div>
 							</li>
-
 						</ul>
 					</div>
 				</div>
