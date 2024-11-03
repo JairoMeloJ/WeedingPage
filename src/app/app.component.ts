@@ -7,8 +7,7 @@ import { FeaturesModule } from './features/features.module';
   imports: [
     FeaturesModule
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'weedingpage-angelajairo';
