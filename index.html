@@ -11,9 +11,8 @@
 	<!-- Título de la página -->
 	<title>Boda - Angela&Jairo</title>
 
-	<meta name="keywords"
-		content="una sola página, página única, multipágina, plantilla de boda, retina lista, responsive, plantilla moderna html5, bootstrap, css3, boda, lugar">
-	<meta name="description" content="Neela - Plantilla HTML5 Responsiva para Boda">
+	<meta name="keywords" content="Pagina de boda para angela tejeda y jairo melo, 21 de diciembre del 2024">
+	<meta name="description" content="Jairo&Angela - Estas invitado a nuestra boda!">
 	<meta name="author" content="Jairo Melo">
 
 	<!-- Meta móvil -->
@@ -165,8 +164,9 @@
 							<div class="hover-info neela-style">
 								<div class="content">
 									<h3>Angela Tejeda<br> & <br>Jairo Melo<small>Los Novios</small></h3>
-									<p>¡Es todo lo que siempre soñé y estoy emocionada de pasar el resto de mi vida
-										con él!</p>
+									<p>¡Es todo lo que siempre soñamos y estamos emocionados de pasar el resto de
+										nuestra vida
+										juntos!</p>
 								</div>
 							</div>
 						</div>
@@ -214,28 +214,43 @@
 								<span class="neela-style">2022</span>
 							</div>
 
-							<div class="gallery-container">
-								<div class="timeline-gallery-wrapper" data-animation-direction="from-left"
+							<div class="template-1">
+								<div class="image-1" data-parallax="-4" data-animation-direction="from-right"
 									data-animation-delay="250">
-									<div class="timeline-gallery owl-carousel">
-										<div *ngFor="let image of year2022; let i = index" class="item">
-											<a class="hover-img" [href]="'./images/2022/' + image"
-												data-lightbox="gallery-timeline"
-												[ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }"
-												title="Our Vacations">
-												<span class="btn btn-light btn-sm">+</span>
-											</a>
-											<img [src]="'./images/2022/' + image" alt="Foto #{{i}} - {{image}}"
-												style="max-height: 430px; max-width: 620px; object-fit: contain;"
-												[ngStyle]="{ 'transform': i === 0 ? 'scaleX(-1)' : 'scaleX(1)' }" />
-										</div>
-
-									</div>
+									<img src="./images/2022/6.JPG"
+										style="max-width: 600px; max-height: 600px; transform: scaleX(-1);"
+										alt="Tercera">
 								</div>
 
-								<div class="description-wrapper" data-animation-direction="from-bottom"
+								<div class="image-2" data-parallax="6" data-animation-direction="from-left"
 									data-animation-delay="250">
-									<div class="description">
+									<img src="./images/2022/2.JPG" style="max-width: 600px; max-height: 650px;"
+										alt="Segunda">
+								</div>
+							</div>
+
+							<div class="template-2">
+								<div class="videoEmbed" data-parallax="6" data-animation-direction="from-top"
+									data-animation-delay="250">
+									<img src="./images/2022/1.JPG" alt="Tercera">
+								</div>
+
+								<div class="image-1" data-parallax="6" data-animation-direction="from-left"
+									data-animation-delay="250">
+									<img src="./images/2022/4.JPG" style="max-width: 600px; max-height: 600px;"
+										alt="Cuarta">
+								</div>
+
+								<div class="image-2" data-parallax="-4" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/2022/5.JPG" style="max-width: 600px; max-height: 650px;"
+										alt="Quinta">
+								</div>
+
+								<div class="description-wrapper" data-parallax="-6"
+									data-animation-direction="from-bottom" data-animation-delay="250">
+									<div class="description" data-parallax="-6" data-animation-direction="from-bottom"
+										data-animation-delay="250">
 										<div class="neela-style">
 											<h4>Algunos de nuestros momentos más especiales</h4>
 											<p>Hemos compartido aventuras y risas, hemos superado desafíos y crecido
@@ -246,6 +261,20 @@
 												esperanza y sueños compartidos.</p>
 										</div>
 									</div>
+								</div>
+							</div>
+
+							<div class="template-1" style="transform: scaleX(-1);">
+								<div class="image-1" data-parallax="-4" data-animation-direction="from-right"
+									data-animation-delay="250">
+									<img src="./images/2022/3.JPG" style="max-width: 600px; max-height: 600px; transform: scaleX(-1);"
+										alt="Tercera">
+								</div>
+
+								<div class="image-2" data-parallax="6" data-animation-direction="from-left"
+									data-animation-delay="250">
+									<img src="./images/2022/7.jpg" style="max-width: 600px; max-height: 650px;"
+										alt="Segunda">
 								</div>
 							</div>
 
@@ -463,7 +492,7 @@
 		<!-- FIN DE LA SECCIÓN UBICACIÓN -->
 
 		<!-- COMIENZO DE LA SECCIÓN TESTIMONIOS -->
-		<section id="testimonials" class="bg-color side-flowers-light padding-divider-top">
+		<!-- <section id="testimonials" class="bg-color side-flowers-light padding-divider-top">
 			<div class="container">
 
 				<div class="row">
@@ -512,7 +541,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- FIN DE LA SECCIÓN TESTIMONIOS -->
 
 		<!-- COMIENZO DE LA SECCIÓN GALERÍA -->
@@ -546,10 +575,11 @@
 		<!-- FIN DE LA SECCIÓN GALERÍA -->
 
 		<!-- COMIENZO DE LA SECCIÓN REGALOS DE BODA -->
-		<section id="giftregistry" class="section-bg-color parallax-background padding-divider-top section-divider-bottom-1">
+		<section id="giftregistry"
+			class="section-bg-color parallax-background padding-divider-top section-divider-bottom-1">
 			<div class="section-divider-top-1 off-section"></div>
-			<div class="container">
-				<div class="row">
+			<div class="container d-flex">
+				<div class="col">
 					<div class="col-md-8 col-xl-6">
 						<h2 class="section-title-lg uppercase desc"><small>Lista de</small><strong>Regalos</strong>
 						</h2>
@@ -558,17 +588,15 @@
 							mattis a gravida eget, lobortis ut velit. Nam interdum hendrerit nisl et malesuada.
 						</div>
 					</div>
-				</div>
-		
-				<div class="row">
+
 					<div class="col-md-8 col-xl-6">
 						<ul class="wedding-gifts">
-		
+
 							<li id="gift-list" data-animation-direction="from-bottom" data-animation-delay="300">
 								<div class="neela-style">
 									<i class="icon-wedding"></i>
 									<h3>Consulta nuestra<br>lista de regalos</h3>
-		
+
 									<div class="info">
 										<a href="https://listadeboda.plazalama.com/lbd/lista/ver/506" class="img"><img
 												src="./images/PlazaLama.png" alt="Plaza Lama" /></a>
@@ -577,14 +605,15 @@
 									</div>
 								</div>
 							</li>
-		
+
 							<li id="help-honeymoon" data-animation-direction="from-bottom" data-animation-delay="300">
 								<div class="neela-style">
 									<i class="icon-honeymoon"></i>
 									<h3>Tambien puedes contribuir a nuestra<br>luna de miel soñada</h3>
-		
+
 									<div class="info">
-										¡Puedes llamarnos personalmente y socilitar información sobre como podría ser posible!
+										¡Puedes llamarnos personalmente y socilitar información sobre como podría ser
+										posible!
 									</div>
 								</div>
 							</li>
