@@ -41,7 +41,6 @@
 </head>
 
 <body>
-
 	<!-- COMIENZO DEL PRELOADER -->
 	<div id="preloader">
 		<div class="loading-heart">
@@ -146,7 +145,7 @@
 					<div class="element col-md-6 col-xl-4" data-animation-direction="from-right"
 						data-animation-delay="400">
 						<div class="image">
-							<img src="./images/hero/front-bg.jpg" alt="" />
+							<img src="./images/hero/front-bg.jpg" alt="Los novios" style="filter: brightness(2.5);"/>
 							<div class="hover-info neela-style">
 								<div class="content">
 									<h3>Angela Tejeda<br> & <br>Jairo Melo<small>Los Novios</small></h3>
@@ -248,7 +247,8 @@
 							<div class="template-1" style="transform: scaleX(-1);">
 								<div class="image-1" data-parallax="-4" data-animation-direction="from-right"
 									data-animation-delay="250">
-									<img src="./images/2022/3.JPG" style="max-width: 600px; max-height: 600px; transform: scaleX(-1);"
+									<img src="./images/2022/3.JPG"
+										style="max-width: 600px; max-height: 600px; transform: scaleX(-1);"
 										alt="Tercera">
 								</div>
 
@@ -548,8 +548,11 @@
 					</ul>
 				</div>
 
-				<div class="center mt-5">
-					<a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoModal">+</a>
+				<div class="center mt-5" id="photoUploadContainer">
+					<p id="photoUploadMessage" style="display: none;">Se permitirá subir fotos el día de la boda: 21 de diciembre de 2024</p>
+					
+					<a id="photoUploadButton" type="button" class="btn btn-primary" data-bs-toggle="modal"
+					   data-bs-target="#photoModal" style="display: none;">+</a>
 				</div>
 			</div>
 		</section>
@@ -564,18 +567,21 @@
 					<div class="col-md-8 col-xl-6">
 						<h2 class="section-title-lg uppercase desc"><small>Lista de</small><strong>Regalos</strong>
 						</h2>
-						<div class="section-desc">Celebra con nosotros este momento tan especial. Encuentra el regalo perfecto 
-							para compartir nuestra alegría y ser parte de este capítulo único en nuestras vidas. Cada obsequio 
-							representa un detalle que llevaremos con cariño, recordándonos el amor y apoyo de quienes más queremos.
+						<div class="section-desc">Celebra con nosotros este momento tan especial. Encuentra el regalo
+							perfecto
+							para compartir nuestra alegría y ser parte de este capítulo único en nuestras vidas. Cada
+							obsequio
+							representa un detalle que llevaremos con cariño, recordándonos el amor y apoyo de quienes
+							más queremos.
 							Gracias por unirte a nuestra historia y hacer que este día sea aún más memorable. 💍✨
 						</div>
 					</div>
 
 					<div class="col-md-8 col-xl-6">
 						<ul class="wedding-gifts">
-
 							<li id="gift-list" data-animation-direction="from-bottom" data-animation-delay="300">
 								<div class="neela-style">
+									<div class="click"></div>
 									<i class="icon-wedding"></i>
 									<h3>Consulta nuestra<br>lista de regalos</h3>
 
@@ -622,14 +628,13 @@
 
 						<!-- COMIENZO DEL LISTADO DE BLOGS -->
 						<div class="blog-listing clearfix">
-							<div class="row gx-5 blog-container" id="blog-container">
-
-							</div>
+							<div class="row gx-5 blog-container" id="blog-container"></div>
 						</div>
 						<!-- FIN DEL LISTADO DE BLOGS -->
 
-						<div class="center">
-							<a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogModal">+</a>
+						<div class="center mt-5" id="blogUploadContainer">
+							<p id="blogUploadMessage" style="display: none;">Se permitirá subir recuerdos el día de la boda: 21 de diciembre de 2024</p>
+							<a id="blogUploadButton" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogModal" style="display: none;">+</a>
 						</div>
 					</div>
 				</div>
@@ -688,9 +693,8 @@
 	</div>
 	<!-- FIN DEL WRAPPER -->
 
-	<!-- MODALES -->
-	<!-- FOTOS -->
-	<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+	<!-- PHOTOS -->
+	<div id="photoModal" class="modal fade" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -705,19 +709,21 @@
 						<label for="photo-file">Seleccionar foto:</label>
 						<input type="file" id="photo-file" name="photo-file" required class="form-control mb-3">
 
-						<div style="display: flex; justify-content: space-between; width: 100% !important;">
-							<button type="submit" class="btn btn-primary w-100">Subir foto</button>
-						</div>
+						<button type="submit" class="btn btn-primary w-100" style="margin: 0px;">Subir foto</button>
 					</form>
-					<div id="photo-status"></div>
+
+					<div id="photo-status" class="progress mt-3" style="display: none;">
+						<div id="status" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;"
+							aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- -->
+	<!-- END PHOTOS -->
 
 	<!-- BLOGS -->
-	<div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
+	<div id="blogModal" class="modal fade" tabindex="-1" aria-labelledby="blogModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -735,43 +741,18 @@
 						<label for="image">Subir imagen:</label>
 						<input type="file" id="image" name="image" required class="form-control mb-3">
 
-						<div style="display: flex; justify-content: space-between; width: 100% !important;">
-							<button type="submit" class="btn btn-primary w-100">Subir blog</button>
-						</div>
+						<button type="submit" class="btn btn-primary w-100" style="margin: 0px;">Subir blog</button>
 					</form>
-					<div id="status"></div>
+
+					<div id="blog-status" class="progress mt-3" style="display: none;">
+						<div id="statusBlog" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;"
+							aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- -->
-
-	<style>
-		.modal {
-			z-index: 99999;
-		}
-
-		.modal-backdrop {
-			z-index: 99980;
-			/* Asegúrate de que el backdrop esté por debajo del modal */
-			opacity: 0.5;
-			/* Haz que el backdrop sea semitransparente */
-		}
-
-		.paypal-buttons-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 10px;
-			/* Espacio entre los botones */
-		}
-
-		/* Personalización adicional opcional para los botones */
-		.paypal-buttons-container>div {
-			flex: 1 auto;
-		}
-	</style>
-	<!-- END MODALES -->
+	<!-- END BLOGS -->
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -792,18 +773,18 @@
 	<script src="js/waypoints-sticky.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
+	<script src="js/timerUploads.js"></script>
+	<script src="js/blogs.js"></script>
+	<script src="js/photos.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
-	<!-- Nicescroll script to handle gallery section touch swipe -->
 	<script src="js/jquery.nicescroll.js"></script>
 
-	<!-- Hero Background Slideshow Script -->
 	<script src="js/jquery.zoomslider.js"></script>
 
-	<!-- Template Scripts -->
 	<script src="js/variables.js"></script>
 	<script src="js/scripts.js"></script>
 
@@ -821,167 +802,8 @@
 		const db = firebase.firestore();
 		const storage = firebase.storage();
 
-		//Cargar Blogs
-		async function loadBlogs() {
-			const blogContainer = document.getElementById('blog-container');
-
-			try {
-				db.collection('blogs').orderBy('date', 'desc').onSnapshot(snapshot => {
-					blogContainer.innerHTML = '';
-					if (snapshot.empty) {
-						blogContainer.innerHTML = '<h2 class="section-title-lg uppercase desc"><small>No hay recuerdos creados en este momento.</small></h2>';
-					} else {
-						snapshot.forEach(doc => {
-							const blog = doc.data();
-							console.log('Blog encontrado:', blog);
-
-							const blogHTML = `
-								<article class="item col-md-6">
-									<div class="image">
-										<a href="${blog.imageURL}" data-lightbox="WeddingPhotos" title="${blog.title}">
-											<span class="btn btn-light"><i class="fa fa-file-o"></i>Expandir</span>
-										</a>
-										<img src="${blog.imageURL || 'https://via.placeholder.com/800x500'}" alt="Imagen del Blog" style="max-width: 100%; max-height: 250px; object-fit: cover;"/>
-									</div>
-
-									<div class="date">${new Date(blog.date.toDate()).toLocaleDateString()}</div>
-
-									<div class="info-blog">
-										<h3 class="post-title"><a href="blog-single-post.html">${blog.title}</a></h3>
-
-										<p>${blog.content}</p>
-
-										<div class="bottom-info">
-										</div>
-									</div>
-								</article>
-							`;
-							blogContainer.innerHTML += blogHTML;
-						});
-					}
-				});
-			} catch (error) {
-				console.error('Error al cargar blogs:', error);
-			}
-		}
-
 		loadBlogs();
-
-		//Crear blog
-		document.getElementById('blog-form').addEventListener('submit', async function (event) {
-			event.preventDefault();
-
-			const title = document.getElementById('title').value;
-			const content = document.getElementById('content').value;
-			const imageFile = document.getElementById('image').files[0];
-
-			const storageRef = storage.ref('wedding-images/' + imageFile.name);
-
-			const uploadTask = storageRef.put(imageFile);
-
-			uploadTask.on('state_changed',
-				function progress(snapshot) {
-					const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-					document.getElementById('status').innerText = 'Subiendo: ' + percentage + '%';
-				},
-				function error(err) {
-					console.error('Error al subir la imagen:', err);
-				},
-				async function complete() {
-					const imageURL = await uploadTask.snapshot.ref.getDownloadURL();
-
-					await db.collection('blogs').add({
-						title: title,
-						content: content,
-						imageURL: imageURL,
-						date: new Date()
-					});
-
-					document.getElementById('status').innerText = '¡Blog subido exitosamente!';
-
-					document.getElementById('blog-form').reset();
-
-					loadBlogs();
-				}
-			);
-		});
-
-		//Cargar fotos
-		async function loadPhotos() {
-			const photoContainer = document.getElementById('photo-container');
-
-			try {
-				db.collection('photos').orderBy('date', 'desc').onSnapshot(snapshot => {
-					photoContainer.innerHTML = '';
-					if (snapshot.empty) {
-						photoContainer.innerHTML = '<h2 class="section-title-lg uppercase desc"><small>No hay fotos cargadas en este momento.</small></h2>';
-					} else {
-						snapshot.forEach(doc => {
-							const photo = doc.data();
-
-							const photoHTML = `
-								<li>
-									<div class="hover-info">
-										<a class="btn btn-light btn-sm only-icon"
-											href="${photo.photoURL}"
-											data-lightbox="WeddingPhotos" title="${photo.title}">
-											<i class="fa fa-link"></i>
-										</a>
-									</div>
-									<img src="${photo.photoURL}" alt="Foto de la boda" width="635px" height="635px" />
-								</li>
-		                    `;
-							photoContainer.innerHTML += photoHTML;
-						});
-					}
-				});
-			} catch (error) {
-				console.error('Error al cargar las fotos:', error);
-			}
-		}
-
 		loadPhotos();
-
-
-		//Subir foto
-		document.getElementById('photo-form').addEventListener('submit', async function (event) {
-			event.preventDefault();
-
-			const title = document.getElementById('photo-title').value;
-			const photoFile = document.getElementById('photo-file').files[0];
-
-			if (!photoFile) {
-				console.error('No se seleccionó ninguna foto');
-				return;
-			}
-
-			const storageRef = storage.ref('wedding-photos/' + photoFile.name);
-
-			const uploadTask = storageRef.put(photoFile);
-
-			uploadTask.on('state_changed',
-				function progress(snapshot) {
-					const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-					document.getElementById('photo-status').innerText = 'Subiendo: ' + percentage + '%';
-				},
-				function error(err) {
-					console.error('Error al subir la foto:', err);
-				},
-				async function complete() {
-					const photoURL = await uploadTask.snapshot.ref.getDownloadURL();
-
-					// Guardar la foto en Firestore con su título y URL
-					await db.collection('photos').add({
-						title: title,
-						photoURL: photoURL,
-						date: new Date()
-					});
-
-					document.getElementById('photo-status').innerText = '¡Foto subida exitosamente!';
-					document.getElementById('photo-form').reset();
-				}
-			);
-		});
 	</script>
 </body>
 
